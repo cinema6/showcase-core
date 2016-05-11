@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "./scripts/test.js",
-    "build": "./scripts/build.js",
+    "build": "babel src -d dist",
     "tdd": "./scripts/tdd.js"
   },
   "repository": {
@@ -20,5 +20,10 @@
   "homepage": "https://github.com/cinema6/showcase-core#readme",
   "publishConfig": {
     "registry": "http://deployer1:4873/"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-es2015-loose": "^7.0.0"
   }
 }
