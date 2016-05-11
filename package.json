@@ -1,0 +1,24 @@
+{
+  "name": "showcase-core",
+  "version": "1.0.0",
+  "description": "Isomorphic JS modules containing showcase business logic.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "./scripts/test.js",
+    "build": "./scripts/build.js",
+    "tdd": "./scripts/tdd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinema6/showcase-core.git"
+  },
+  "author": "Reelcontent, Inc.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/cinema6/showcase-core/issues"
+  },
+  "homepage": "https://github.com/cinema6/showcase-core#readme",
+  "publishConfig": {
+    "registry": "http://deployer1:4873/"
+  }
+}
