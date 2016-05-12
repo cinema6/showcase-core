@@ -66,6 +66,7 @@ export function createInterstitialFactory({
                 small: thumbnail,
                 large: thumbnail
             },
+            title: productData.name,
             type: cardType
         };
     };

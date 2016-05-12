@@ -149,6 +149,7 @@ describe('app factories', function() {
                         small: find(productData.images, { type: 'thumbnail' }).uri,
                         large: find(productData.images, { type: 'thumbnail' }).uri
                     },
+                    title: productData.name,
                     type: config.cardType
                 });
             });
