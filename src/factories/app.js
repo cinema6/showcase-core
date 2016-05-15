@@ -13,7 +13,7 @@ import _ from 'lodash';
  *     * Changes the CTA to be "Download for Free" if the app is free
  **************************************************************************************************/
 export function createInterstitialFactory({
-    duration = 30,
+    countdown = 30,
     slideCount = Infinity,
     cardType = 'showcase--app'
 }) {
@@ -29,7 +29,7 @@ export function createInterstitialFactory({
                 logo: null
             },
             data: {
-                duration,
+                skip: countdown,
                 price,
                 rating: rating >= 4 ? rating : null, // Only show the rating if it is above 4
                 slides: _(productData.images)

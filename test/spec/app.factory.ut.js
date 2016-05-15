@@ -91,7 +91,7 @@ describe('app factories', function() {
             config = {
                 cardType: 'showcase--app',
                 slideCount: 3,
-                duration: 15
+                countdown: 15
             };
 
             createInterstitial = createInterstitialFactory(config);
@@ -117,7 +117,7 @@ describe('app factories', function() {
                         logo: null
                     },
                     data: {
-                        duration: config.duration,
+                        skip: config.countdown,
                         rating: productData.rating,
                         price: productData.price,
                         slides: productData.images.filter(image => image.type === 'screenshot')
@@ -197,7 +197,7 @@ describe('app factories', function() {
         beforeEach(function() {
             config = {
                 cardType: 'showcase--app--300x250',
-                duration: 30
+                countdown: 30
             };
 
             createThreeHundredByTwoFifty = createThreeHundredByTwoFiftyFactory(config);
