@@ -10,7 +10,7 @@
     "test": "node ./scripts/test.js && eslint src test scripts",
     "build": "babel src -d dist",
     "tdd": "node ./scripts/tdd.js",
-    "prepublish": "npm test && npm build"
+    "prepublish": "npm test && npm run build"
   },
   "repository": {
     "type": "git",
