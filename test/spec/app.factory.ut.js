@@ -91,7 +91,8 @@ describe('app factories', function() {
             config = {
                 cardType: 'showcase--app',
                 slideCount: 3,
-                countdown: 15
+                countdown: 15,
+                advanceInterval: 5
             };
 
             createInterstitial = createInterstitialFactory(config);
@@ -117,6 +118,7 @@ describe('app factories', function() {
                         logo: null
                     },
                     data: {
+                        advanceInterval: config.advanceInterval,
                         skip: config.countdown,
                         rating: productData.rating,
                         price: productData.price,

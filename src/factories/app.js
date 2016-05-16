@@ -15,7 +15,8 @@ import _ from 'lodash';
 export function createInterstitialFactory({
     countdown = 30,
     slideCount = Infinity,
-    cardType = 'showcase--app'
+    cardType = 'showcase--app',
+    advanceInterval = 4
 }) {
     return function createInterstitial(productData) {
         const thumbnail = _(productData.images).find({ type: 'thumbnail' }).uri;
@@ -29,6 +30,7 @@ export function createInterstitialFactory({
                 logo: null
             },
             data: {
+                advanceInterval,
                 skip: countdown,
                 price,
                 rating: rating >= 4 ? rating : null, // Only show the rating if it is above 4
