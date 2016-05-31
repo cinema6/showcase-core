@@ -92,7 +92,11 @@ describe('app factories', function() {
                 cardType: 'showcase--app',
                 slideCount: 3,
                 countdown: 15,
-                advanceInterval: 5
+                advanceInterval: 5,
+                description: {
+                    show: true,
+                    autoHide: 3
+                }
             };
 
             createInterstitial = createInterstitialFactory(config);
@@ -118,6 +122,8 @@ describe('app factories', function() {
                         logo: null
                     },
                     data: {
+                        showDescription: config.description.show,
+                        autoHideDescription: config.description.autoHide,
                         advanceInterval: config.advanceInterval,
                         skip: config.countdown,
                         rating: productData.rating,

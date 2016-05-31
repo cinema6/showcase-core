@@ -16,7 +16,11 @@ export function createInterstitialFactory({
     countdown = 30,
     slideCount = Infinity,
     cardType = 'showcase--app',
-    advanceInterval = 4
+    advanceInterval = 4,
+    description: {
+        show: showDescription = false,
+        autoHide: autoHideDescription = 0
+    } = {}
 }) {
     return function createInterstitial(productData) {
         const thumbnail = _(productData.images).find({ type: 'thumbnail' }).uri;
@@ -30,6 +34,8 @@ export function createInterstitialFactory({
                 logo: null
             },
             data: {
+                showDescription,
+                autoHideDescription,
                 advanceInterval,
                 skip: countdown,
                 price,
