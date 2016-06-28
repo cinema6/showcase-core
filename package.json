@@ -4,8 +4,13 @@
   "description": "Isomorphic JS modules containing showcase business logic.",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
+  "bin": {
+    "showcase": "./bin/showcase.js",
+    "showcase-reinit": "./bin/showcase-reinit.js"
+  },
   "scripts": {
     "test": "node ./scripts/test.js && eslint src test scripts",
     "build": "babel src -d dist",
@@ -38,7 +43,13 @@
     "watch": "^0.18.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "babel-register": "^6.9.0",
+    "beeswax-client": "^0.2.0",
+    "commander": "^2.9.0",
     "lodash": "^4.12.0",
-    "moment": "^2.13.0"
+    "moment": "^2.13.0",
+    "rc-kinesis": "^1.1.0",
+    "request-promise": "^3.0.0"
   }
 }
