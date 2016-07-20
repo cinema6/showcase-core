@@ -60,7 +60,8 @@ program
             })).then(placements => Promise.all(placements.map(({ id }) => (
                 request.delete(api(`placements/${id}`))
             )))).then(() => request.get(api(`campaigns/${campaign}`))).then(campaign => {
-                const beeswaxID = get(campaign, 'externalCampaigns.beeswax.externalId');
+                const beeswaxID = get(campaign, 'externalIds.beeswax') ||
+                    get(campaign, 'externalCampaigns.beeswax.externalId');
 
                 if (!beeswaxID) { return campaign; }
 
