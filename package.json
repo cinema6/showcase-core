@@ -9,7 +9,8 @@
   ],
   "bin": {
     "showcase": "./bin/showcase.js",
-    "showcase-reinit": "./bin/showcase-reinit.js"
+    "showcase-reinit": "./bin/showcase-reinit.js",
+    "showcase-set-target": "./bin/showcase-set-target.js"
   },
   "scripts": {
     "test": "node ./scripts/test.js && eslint src test scripts",
